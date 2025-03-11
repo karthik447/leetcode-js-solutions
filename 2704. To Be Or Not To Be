@@ -1,0 +1,4 @@
+var expect = (val) => ({
+    toBe: (expected) => val === expected ? true : (() => { throw new Error("Not Equal") })(),
+    notToBe: (expected) => val !== expected ? true : (() => { throw new Error("Equal") })()
+});
